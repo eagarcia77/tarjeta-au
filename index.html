@@ -3,50 +3,33 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>WebAR - Hiro Test</title>
+  <title>Test Hiro</title>
 
-  <!-- A-Frame (versión más compatible con AR.js) -->
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-
-  <!-- AR.js para A-Frame -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
-  <style>
-    body { margin:0; overflow:hidden; }
-  </style>
+  <style>body{margin:0;overflow:hidden;}</style>
 </head>
-
 <body>
-  <a-scene
-    embedded
-    vr-mode-ui="enabled:false"
-    renderer="antialias:true; alpha:true;"
-    arjs="sourceType: webcam; debugUIEnabled: true;"
-  >
-    <!-- Pre-carga la imagen para evitar fallos de carga -->
+  <a-scene embedded vr-mode-ui="enabled:false"
+           arjs="sourceType: webcam; debugUIEnabled: true;">
     <a-assets>
-      <img id="card" src="tarjeta.jpg" />
+      <img id="card" src="tarjeta.jpg">
     </a-assets>
 
-    <!-- Marcador HIRO -->
     <a-marker preset="hiro">
+      <!-- Prueba de detección -->
+      <a-box position="0 0.5 0" material="color: red;"></a-box>
 
-      <!-- 1) Cubo de prueba (si ves esto, el marcador está detectando) -->
-      <a-box position="0 0.5 0" depth="0.3" height="0.3" width="0.3" material="color: red;"></a-box>
-
-      <!-- 2) Tu tarjeta como “panel” (doble cara + un poquito elevada) -->
-      <a-plane
-        position="0 0.01 0"
-        rotation="-90 0 0"
-        width="1.4"
-        height="0.75"
-        material="src: #card; side: double;"
-      ></a-plane>
-
+      <!-- Tu tarjeta -->
+      <a-plane position="0 0.01 0"
+               rotation="-90 0 0"
+               width="1.4" height="0.75"
+               material="src:#card; side: double;">
+      </a-plane>
     </a-marker>
 
     <a-entity camera></a-entity>
   </a-scene>
 </body>
 </html>
-
