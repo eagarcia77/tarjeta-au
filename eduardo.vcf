@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:García;Eduardo;;Dr.;
+FN:Dr. Eduardo García
+TITLE:Diseño Curricular
+ORG:Universidad Interamericana de Puerto Rico, Recinto de San Germán
+TEL;TYPE=WORK,VOICE:(787) 264-1912
+TEL;TYPE=WORK,VOICE:Ext. 7795
+EMAIL;TYPE=WORK:eduardo_garcia@sangerman.inter.edu
+ADR;TYPE=WORK:;;Edificio Jorge A. Farinacci - Oficina 207;San Germán;PR;;Puerto Rico
+NOTE:Proyecto UCAN, PPOHA - University Center for Advancing & Nurturing Postgraduate Quality
+END:VCARD
